@@ -1,0 +1,16 @@
+{
+    "name": "BGCurveEditor",
+    "references": [
+        "GUID:96c6ae9a78b2cdb458258fc478cdddc1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

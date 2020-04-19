@@ -16,11 +16,11 @@ public enum Direction : int
 	Up		= 1 << 2,
 	Down	= 1 << 18,
 
-	LeftTop		= 1 << 3,
-	RightBottom	= 1 << 19,
+	LeftTop		= 1 << 3 | Left | Top,
+	RightBottom	= 1 << 19 | Right | Bottom,
 
-	RightTop		= 1 << 4,
-	LeftBottom		= 1 << 20,
+	RightTop		= 1 << 4 | Right | Top,
+	LeftBottom		= 1 << 20 | Left | Bottom,
 
 
 	UpLeft			= 1 << 5,

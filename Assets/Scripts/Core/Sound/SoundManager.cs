@@ -83,7 +83,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMusic(string sound)
     {
-        if (sound != null && m_SoundDictionary.TryGetValue(sound, out var audioClip))
+        if (string.IsNullOrEmpty(sound) == false && m_SoundDictionary.TryGetValue(sound, out var audioClip))
         {
             m_MusicChanel.clip = audioClip;
             m_MusicChanel.Play();

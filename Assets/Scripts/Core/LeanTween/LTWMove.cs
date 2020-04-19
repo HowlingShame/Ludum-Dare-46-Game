@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 [Serializable]
@@ -8,6 +9,15 @@ public class LTWMove : LeanTweenWrapper
 {
     [SerializeField] 
     protected GameObject        m_Source;
+    public GameObject           Source
+    {
+        get => m_Source;
+        set
+        {
+            Cancel();
+            m_Source = value;
+        }
+    }
 
     [Space]
     [SerializeField] 
@@ -19,11 +29,11 @@ public class LTWMove : LeanTweenWrapper
     [SerializeField]
     private MoveTime            m_MoveTime = MoveTime.Constant;
     [SerializeField]
-    private float               m_Time = 1.0f;
+    public float               m_Time = 1.0f;
 
     [Space]
     [SerializeField] 
-    private MoveMode          m_MoveMode = MoveMode.Target;
+    private MoveMode            m_MoveMode = MoveMode.Position;
 
     [SerializeField]
     [DrawIf("m_MoveMode", DrawIfAttribute.DisablingType.DontDraw, MoveMode.Position)]
@@ -188,6 +198,16 @@ public class LTWMove : LeanTweenWrapper
     }
 
     //////////////////////////////////////////////////////////////////////////
+    public LTDescr Instance(GameObject source)
+    {
+        var descTmp = m_Descriptor;
+        m_Descriptor = null;
+        Source = source;
+        var result = Descriptor;
+        m_Descriptor = descTmp;
+
+        return result.resume();
+    }
     public override LTDescr Start()
     {
         return Descriptor.resume();
@@ -201,6 +221,9 @@ public class LTWMove : LeanTweenWrapper
     public override void Cancel()
     {
         if (m_Descriptor != null)
+        {
             LeanTween.cancel(m_Descriptor.uniqueId);
+            m_Descriptor = null;
+        }
     }
 }

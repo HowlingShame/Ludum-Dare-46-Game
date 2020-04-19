@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d48f7c6a9bb3c4ba4212c1f530d8e8, type: 3}
+  m_Name: Dangers
+  m_EditorClassIdentifier: 
+  m_Data:
+    array:
+    - m_Chanse:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.0008049011
+          value: 0.3
+          inSlope: 0.699437
+          outSlope: 0.699437
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0.060521085
+          outSlope: 0.060521085
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.044176664
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      m_Prefab: {fileID: 4341630363651659814, guid: e3d71fd559ff2ec4ca0c0bae706d9117,
+        type: 3}
+    - m_Chanse:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0.6
+          inSlope: 0.74783385
+          outSlope: 0.74783385
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.40079424
+          value: 0.8997275
+          inSlope: 0.23050487
+          outSlope: 0.23050487
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.8907471
+          value: 0.75919724
+          inSlope: -0.2868241
+          outSlope: -0.2868241
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+      m_Prefab: {fileID: 6097321758605960167, guid: 2fa02e7fc2bb357439aabd2e7e77d11f,
+        type: 3}

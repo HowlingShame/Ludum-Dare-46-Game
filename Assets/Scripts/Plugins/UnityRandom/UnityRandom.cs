@@ -533,7 +533,11 @@ public class UnityRandom : IRandomGenerator
 		return new Color(UnityEngine.Random.Range(rRange.x, rRange.y), UnityEngine.Random.Range(gRange.x, gRange.y),
 			UnityEngine.Random.Range(bRange.x, bRange.y), UnityEngine.Random.Range(aRange.x, aRange.y));
 	}
-
+    
+    public static Vector2 Vector2(Vector2 range)
+    {
+        return new Vector2(UnityEngine.Random.Range(-range.x, range.x), UnityEngine.Random.Range(range.y, range.y));
+    }
 	public static Vector2 Vector2(Vector2 xRange, Vector2 yRange)
 	{
 		return new Vector2(UnityEngine.Random.Range(xRange.x, xRange.y), UnityEngine.Random.Range(yRange.x, yRange.y));
